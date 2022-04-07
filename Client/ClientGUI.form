@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ClientGUI">
+  <grid id="27dc6" binding="pnlClient" layout-manager="CardLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="668" height="459"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="77c8f" binding="pnlConnect" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <card name="Card1"/>
+        </constraints>
+        <properties>
+          <minimumSize width="570" height="370"/>
+          <visible value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="6710f" class="javax.swing.JTextField" binding="tfDomain">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="1075d" class="javax.swing.JLabel" binding="lblDomain">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Domain:"/>
+            </properties>
+          </component>
+          <component id="9d4f0" class="javax.swing.JButton" binding="btnConnect">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Connect"/>
+            </properties>
+          </component>
+          <vspacer id="e449">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <hspacer id="36883">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <hspacer id="7cc21">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="3b614" class="javax.swing.JLabel" binding="lblLogoConnect">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="logo_edited.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="40993" class="javax.swing.JLabel" binding="lblWebsiteConnect">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="www.vandurasystems.xyz"/>
+            </properties>
+          </component>
+          <hspacer id="3c202">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="-1"/>
+                <maximum-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="2291b" class="javax.swing.JProgressBar" binding="pbConnection">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <value value="50"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="dc452" binding="pnlLogin" layout-manager="GridLayoutManager" row-count="11" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <card name="Card2"/>
+        </constraints>
+        <properties>
+          <minimumSize width="570" height="370"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="dcda0" class="javax.swing.JTextField" binding="tfUsernameLogin">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="a9c56" class="javax.swing.JPasswordField" binding="pfPasswordLogin">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="b2663" class="javax.swing.JButton" binding="btnLogin">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Login"/>
+            </properties>
+          </component>
+          <vspacer id="7748c">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="f173e">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <hspacer id="963c7">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="55e76" class="javax.swing.JLabel" binding="lblUsernameLogin">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Username:"/>
+            </properties>
+          </component>
+          <component id="d924f" class="javax.swing.JLabel" binding="lblPasswordLogin">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Password"/>
+            </properties>
+          </component>
+          <hspacer id="dc4ca">
+            <constraints>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="4ceb7" class="javax.swing.JButton" binding="btnRecover">
+            <constraints>
+              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Forgot Password?"/>
+            </properties>
+          </component>
+          <component id="c3c4b" class="javax.swing.JButton" binding="btnRegister">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Register New User"/>
+            </properties>
+          </component>
+          <vspacer id="eb7d2">
+            <constraints>
+              <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="f0ad3" class="javax.swing.JLabel" binding="lblLogo">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="logo_edited.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="550da" class="javax.swing.JLabel" binding="lblWebsite">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="www.vandurasystems.xyz"/>
+            </properties>
+          </component>
+          <hspacer id="e0ad7">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="-1"/>
+                <maximum-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="e8c05" class="javax.swing.JButton" binding="btnDisconnect">
+            <constraints>
+              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Disconnect"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="19b15" binding="pnlDashboard" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <card name="Card3"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9cd82" class="javax.swing.JButton" binding="btnLogout">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Logout"/>
+            </properties>
+          </component>
+          <hspacer id="a5fce">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="6411f">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="1ce9c" class="javax.swing.JButton" binding="btnChangePassword">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Change Password"/>
+            </properties>
+          </component>
+          <vspacer id="b48f9">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="dd4e8" class="javax.swing.JLabel" binding="lblLogoDashboard">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="logo_edited.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="4ba21" class="javax.swing.JLabel" binding="lblWebsiteDashboard">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="www.vandurasystems.xyz"/>
+            </properties>
+          </component>
+          <hspacer id="3f1f9">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="-1"/>
+                <maximum-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <grid id="8dd78" binding="pnlRegister" layout-manager="GridLayoutManager" row-count="13" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <card name="Card5"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="17215" class="javax.swing.JTextField" binding="tfRegisterUsername">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="65a91" class="javax.swing.JPasswordField" binding="pfRegisterPassword">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="bd087" class="javax.swing.JPasswordField" binding="pfRegisterPasswordConfirm">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="5c44d" class="javax.swing.JTextField" binding="tfRegisterEmail">
+            <constraints>
+              <grid row="7" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="aa7f6" class="javax.swing.JTextField" binding="tfRegisterEmailConfirm">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="bc5bb" class="javax.swing.JTextField" binding="tfRegisterOrg">
+            <constraints>
+              <grid row="10" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <vspacer id="edc7b">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <hspacer id="2b762">
+            <constraints>
+              <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <vspacer id="b064c">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="7afef">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="a9f13">
+            <constraints>
+              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="38822" class="javax.swing.JLabel" binding="lblLogoRegister">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="logo_edited.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="2e6" class="javax.swing.JLabel" binding="lblWebsiteRegister">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="www.vandurasystems.xyz"/>
+            </properties>
+          </component>
+          <hspacer id="4776d">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="-1"/>
+                <maximum-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="cb613" class="javax.swing.JLabel" binding="lblRegisterUsername">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="New Username:"/>
+            </properties>
+          </component>
+          <component id="9238e" class="javax.swing.JLabel" binding="lblRegisterPassword">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Password:"/>
+            </properties>
+          </component>
+          <component id="b44b9" class="javax.swing.JLabel" binding="lblRegisterPasswordConfirm">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Confirm Password:"/>
+            </properties>
+          </component>
+          <component id="51af6" class="javax.swing.JLabel" binding="lblRegisterEmail">
+            <constraints>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Email"/>
+            </properties>
+          </component>
+          <component id="63e5d" class="javax.swing.JLabel" binding="lblRegisterEmailConfirm">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Confirm Email"/>
+            </properties>
+          </component>
+          <component id="bc52c" class="javax.swing.JLabel" binding="lblRegisterOrg">
+            <constraints>
+              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Organization"/>
+            </properties>
+          </component>
+          <component id="a451f" class="javax.swing.JButton" binding="btnRegisterConfirm">
+            <constraints>
+              <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Register"/>
+            </properties>
+          </component>
+          <component id="ae5f6" class="javax.swing.JButton" binding="btnRegisterCancel">
+            <constraints>
+              <grid row="11" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Cancel"/>
+            </properties>
+          </component>
+          <vspacer id="f89aa">
+            <constraints>
+              <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
+        </children>
+      </grid>
+      <grid id="9f757" binding="pnlChange" layout-manager="GridLayoutManager" row-count="8" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <card name="Card6"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="7c64c" class="javax.swing.JPasswordField" binding="pfCurrentPassword">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="91183" class="javax.swing.JPasswordField" binding="pfNewPassword">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="d5145" class="javax.swing.JPasswordField" binding="pfConfirmNewPassword">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <vspacer id="24c72">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="999c3">
+            <constraints>
+              <grid row="0" column="3" row-span="2" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="f959f">
+            <constraints>
+              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <hspacer id="af47c">
+            <constraints>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="cf333" class="javax.swing.JLabel" binding="lblLogoChange">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="logo_edited.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="a6ea8" class="javax.swing.JLabel" binding="lblWebsiteChange">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="www.vandurasystems.xyz"/>
+            </properties>
+          </component>
+          <hspacer id="31aaa">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="-1"/>
+                <maximum-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="f86c5" class="javax.swing.JLabel" binding="lblCurrentPassword">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Current Password:"/>
+            </properties>
+          </component>
+          <component id="89cd1" class="javax.swing.JLabel" binding="lblNewPassword">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="New Password:"/>
+            </properties>
+          </component>
+          <component id="a2d63" class="javax.swing.JLabel" binding="lblConfirmNewPassword">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Confirm New Password:"/>
+            </properties>
+          </component>
+          <component id="6048e" class="javax.swing.JButton" binding="btnChangePasswordSubmit">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Change Password"/>
+            </properties>
+          </component>
+          <component id="27172" class="javax.swing.JButton" binding="btnChangeCancel">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Cancel"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="2ec91" binding="pnlRecover" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <card name="Card4"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <hspacer id="f8fc">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <vspacer id="17021">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="9ccca" class="javax.swing.JTextField" binding="tfEmailRecover">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="d1f59" class="javax.swing.JTextField" binding="tfEmailRecoverConfirm">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="99323" class="javax.swing.JLabel" binding="lblRecoveryEmail">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Email"/>
+            </properties>
+          </component>
+          <component id="643e8" class="javax.swing.JLabel" binding="lblRecoveryConfirmEmail">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Confirm Email"/>
+            </properties>
+          </component>
+          <component id="eb84c" class="javax.swing.JLabel" binding="lblLogoRecovery">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="logo_edited.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="a9232" class="javax.swing.JLabel" binding="lblWebsiteRecovery">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="www.vandurasystems.xyz"/>
+            </properties>
+          </component>
+          <hspacer id="b210">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="-1"/>
+                <maximum-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <component id="646b3" class="javax.swing.JButton" binding="btnRecoveryEmail">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Send Password Recovery Email"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
