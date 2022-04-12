@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <minimumSize width="570" height="370"/>
-          <visible value="true"/>
+          <visible value="false"/>
         </properties>
         <border type="none"/>
         <children>
@@ -296,7 +296,7 @@
           </hspacer>
         </children>
       </grid>
-      <grid id="8dd78" binding="pnlRegister" layout-manager="GridLayoutManager" row-count="13" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="8dd78" binding="pnlRegister" layout-manager="GridLayoutManager" row-count="11" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <card name="Card5"/>
@@ -344,16 +344,6 @@
             </constraints>
             <properties/>
           </component>
-          <component id="bc5bb" class="javax.swing.JTextField" binding="tfRegisterOrg">
-            <constraints>
-              <grid row="10" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
-          </component>
           <vspacer id="edc7b">
             <constraints>
               <grid row="0" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -376,13 +366,6 @@
           <vspacer id="7afef">
             <constraints>
               <grid row="6" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="15"/>
-              </grid>
-            </constraints>
-          </vspacer>
-          <vspacer id="a9f13">
-            <constraints>
-              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="15"/>
               </grid>
             </constraints>
@@ -452,17 +435,9 @@
               <text value="Confirm Email"/>
             </properties>
           </component>
-          <component id="bc52c" class="javax.swing.JLabel" binding="lblRegisterOrg">
-            <constraints>
-              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Organization"/>
-            </properties>
-          </component>
           <component id="a451f" class="javax.swing.JButton" binding="btnRegisterConfirm">
             <constraints>
-              <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Register"/>
@@ -470,7 +445,7 @@
           </component>
           <component id="ae5f6" class="javax.swing.JButton" binding="btnRegisterCancel">
             <constraints>
-              <grid row="11" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Cancel"/>
@@ -478,7 +453,7 @@
           </component>
           <vspacer id="f89aa">
             <constraints>
-              <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="25"/>
               </grid>
             </constraints>

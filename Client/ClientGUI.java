@@ -44,10 +44,8 @@ public class ClientGUI extends JFrame {
     private JPasswordField pfRegisterPasswordConfirm;
     private JTextField tfRegisterEmail;
     private JTextField tfRegisterEmailConfirm;
-    private JTextField tfRegisterOrg;
     private JLabel lblLogoRegister;
     private JLabel lblWebsiteRegister;
-    private JLabel lblRegisterOrg;
     private JLabel lblRegisterEmailConfirm;
     private JLabel lblRegisterEmail;
     private JLabel lblRegisterPasswordConfirm;
