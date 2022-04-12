@@ -1,7 +1,8 @@
+package Client;
+
 public class Client {
 
     public static void main(String[] args){
-       // new ClientGUI();
-        new ServerGUI();
+       new ClientGUI();
     }
 }

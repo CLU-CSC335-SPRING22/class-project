@@ -1,4 +1,8 @@
+package Server;
+
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +22,7 @@ public class ServerGUI extends JFrame {
 
         serverFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         serverFrame.add(pnlServerGUI);
+        lblServerTitle.setForeground(Color.YELLOW);
         serverFrame.pack();
         serverFrame.setLocationRelativeTo(null);
         serverFrame.setVisible(true);
