@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class ServerGUI extends JFrame {
     private JPanel pnlServerGUI;
     private JPanel pnlTop;
@@ -17,8 +18,11 @@ public class ServerGUI extends JFrame {
     private JButton btnClearLog;
     private JFrame serverFrame;
 
+
+
     public ServerGUI() {
         serverFrame = new JFrame("Server");
+        //DBaseConnection dbc = new DBaseConnection();
 
         serverFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         serverFrame.add(pnlServerGUI);
@@ -37,6 +41,7 @@ public class ServerGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+               // dbc.
                 tpQueryLog.setText("Current Registered Users: 0");
             }
         });
@@ -51,5 +56,6 @@ public class ServerGUI extends JFrame {
                 tpQueryLog.setText("");
             }
         });
+
     }
 }
