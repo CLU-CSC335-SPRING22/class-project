@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
 
 public class ServerGUI extends JFrame {
     private JPanel pnlServerGUI;
@@ -15,7 +17,10 @@ public class ServerGUI extends JFrame {
     private JTextArea tpQueryLog;
     private JButton btnQuery;
     private JButton btnClearLog;
+    private JLabel lblConnectionStatus;
     private JFrame serverFrame;
+
+
 
     public ServerGUI() {
         serverFrame = new JFrame("Server");
@@ -28,7 +33,6 @@ public class ServerGUI extends JFrame {
         serverFrame.setVisible(true);
 
 
-
         btnQuery.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
@@ -37,6 +41,7 @@ public class ServerGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+               displayConnection();
                 tpQueryLog.setText("Current Registered Users: 0");
             }
         });
@@ -51,5 +56,15 @@ public class ServerGUI extends JFrame {
                 tpQueryLog.setText("");
             }
         });
+
+    }
+    public void displayConnection(){
+        if (Server.checkConnection()){
+            lblConnectionStatus.setText("Connected");
+            lblConnectionStatus.setForeground(Color.green);
+        }else {
+            lblConnectionStatus.setText("Not Connected");
+            lblConnectionStatus.setForeground(Color.red);
+        }
     }
 }
