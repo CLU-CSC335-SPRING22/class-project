@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 
 public class ServerGUI extends JFrame {
@@ -16,13 +17,13 @@ public class ServerGUI extends JFrame {
     private JTextArea tpQueryLog;
     private JButton btnQuery;
     private JButton btnClearLog;
+    private JLabel lblConnectionStatus;
     private JFrame serverFrame;
 
 
 
     public ServerGUI() {
         serverFrame = new JFrame("Server");
-        //DBaseConnection dbc = new DBaseConnection();
 
         serverFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         serverFrame.add(pnlServerGUI);
@@ -30,7 +31,6 @@ public class ServerGUI extends JFrame {
         serverFrame.pack();
         serverFrame.setLocationRelativeTo(null);
         serverFrame.setVisible(true);
-
 
 
         btnQuery.addActionListener(new ActionListener() {
@@ -41,7 +41,7 @@ public class ServerGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-               // dbc.
+               displayConnection();
                 tpQueryLog.setText("Current Registered Users: 0");
             }
         });
@@ -57,5 +57,14 @@ public class ServerGUI extends JFrame {
             }
         });
 
+    }
+    public void displayConnection(){
+        if (Server.checkConnection()){
+            lblConnectionStatus.setText("Connected");
+            lblConnectionStatus.setForeground(Color.green);
+        }else {
+            lblConnectionStatus.setText("Not Connected");
+            lblConnectionStatus.setForeground(Color.red);
+        }
     }
 }

@@ -1,7 +1,5 @@
-// -- download MySQL from: http://dev.mysql.com/downloads/
-//    Community Server version
-// -- Installation instructions are here: http://dev.mysql.com/doc/refman/5.7/en/installing.html
-// -- open MySQL Workbench to see the contents of the database
+package Server;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,26 +8,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 // -- MAKE SURE THE JDBC CONNECTOR JAR IS IN THE BUILD PATH
-//    workspace -> properties -> Java Build Path -> Libraries -> Add External JARs...
 
-// https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html for example SQL statements
 @SuppressWarnings("CheckStyle")
 public class DBaseConnection {
 
-	// -- objects to be used for database access
-    public static  Connection conn = null;
+    private static Connection conn = null;
     private Statement stmt = null;
     private ResultSet rset = null;
 
-    // -- root/admin
-    // -- connect to the world database
-    // -- this is the connector to the database, default port is 3306
-    //    <<Your schema name here>> is the schema (database) you created using the workbench
     private String userdatabaseURL = "jdbc:mysql://db.vandurasystems.xyz:43599/Vandura?permitMysqlScheme";
-    
-    // -- this is the username/password, created during installation and in MySQL Workbench
-    //    When you add a user make sure you give them the appropriate Administrative Roles
-    //    (DBA sets all which works fine)
     private String user = "vandura";
     private String password = "mistertee";
 
@@ -37,8 +24,6 @@ public class DBaseConnection {
 		String sqlcmd; 
 		
 		try {
-            // -- make the connection to the database
-			//    performs functionality of SQL: use <<your schema>>;
 			conn = DriverManager.getConnection(userdatabaseURL, user, password);
             
 			// -- These will be used to send queries to the database
@@ -144,18 +129,9 @@ public class DBaseConnection {
 
 	}
 
-    public static int queryNumberUsers() throws SQLException {
-        return DBaseConnection.conn.createStatement().executeQuery("SELECT count(username) FROM vandura").getFetchSize();
+    public static boolean getConnectionStatus() throws SQLException {
+        return conn.isValid(5);
     }
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) throws SQLException {
-
-		DBaseConnection dbc = new DBaseConnection();
-        System.out.println(queryNumberUsers());
-
-	}
 
 }
