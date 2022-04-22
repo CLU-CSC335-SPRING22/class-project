@@ -16,9 +16,9 @@ public class DBaseConnection {
     private Statement stmt = null;
     private ResultSet rset = null;
 
-    private String userdatabaseURL = "jdbc:mysql://db.vandurasystems.xyz:43599/Vandura?permitMysqlScheme";
-    private String user = "vandura";
-    private String password = "mistertee";
+    private String userdatabaseURL = System.getenv("URL"); 
+    private String user = System.getenv("USERNAME");
+    private String password = System.getenv("PASSWORD");
 
 	public DBaseConnection() {
 		String sqlcmd; 
