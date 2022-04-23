@@ -153,8 +153,20 @@ public class ClientGUI extends JFrame {
              *
              * @param e the event to be processed
              */
-            @Override
             public void actionPerformed(ActionEvent e) {
+                // Gathers User's Input from Input Fields
+                String username = tfRegisterUsername.getText();
+                String email = tfRegisterEmail.getText();
+                char[] password = pfRegisterPassword.getPassword();
+
+                //Add Validation to Register User and Change Password
+                Validation verify = new Validation(username, password, email);
+
+                if(verify.completeValidation()) {
+                    System.out.println("User Registered");
+                }else{
+                    System.out.println("Please try again...");
+                }
                 pnlRegister.setVisible(false);
                 pnlLogin.setVisible(true);
             }
@@ -191,6 +203,21 @@ public class ClientGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Username and email not needed here
+                String username = "username";
+                String email = "email";
+                char[] newPassword = pfNewPassword.getPassword();
+                char[] confirmNewPassword = pfConfirmNewPassword.getPassword();
+
+                Validation verifyNewPassword = new Validation(username, newPassword, email);
+                Validation verifyConfirmNewPassword = new Validation(username, confirmNewPassword, email);
+
+                if(verifyNewPassword.passwordFormatCheck() && verifyConfirmNewPassword.passwordFormatCheck()){
+                    System.out.println("Password Changed.");
+                } else {
+                    System.out.println("Format Incorrect.");
+                }
+
                 pnlChange.setVisible(false);
                 pnlDashboard.setVisible(true);
             }
