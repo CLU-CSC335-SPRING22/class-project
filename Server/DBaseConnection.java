@@ -16,9 +16,9 @@ public class DBaseConnection {
     private Statement stmt = null;
     private ResultSet rset = null;
 
-    private String userdatabaseURL = System.getenv("URL"); 
-    private String user = System.getenv("USERNAME");
-    private String password = System.getenv("PASSWORD");
+    private String userdatabaseURL = System.getenv("DBURL");
+    private String user = System.getenv("DBUSERNAME");
+    private String password = System.getenv("DBPASSWORD");
 
 	public DBaseConnection() {
 		String sqlcmd; 
