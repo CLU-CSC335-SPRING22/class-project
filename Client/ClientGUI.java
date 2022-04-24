@@ -163,12 +163,25 @@ public class ClientGUI extends JFrame {
                 Validation verify = new Validation(username, password, email);
 
                 if(verify.completeValidation()) {
-                    System.out.println("User Registered");
+                    JOptionPane.showMessageDialog(null, "Success!");
+                    pnlRegister.setVisible(false);
+                    pnlLogin.setVisible(true);
+
+                    // Reset Text Fields
+                    tfRegisterUsername.setText("");
+                    tfRegisterEmail.setText("");
+                    tfRegisterEmailConfirm.setText("");
+                    pfRegisterPassword.setText("");
+                    pfRegisterPasswordConfirm.setText("");
                 }else{
-                    System.out.println("Please try again...");
+                    JOptionPane.showMessageDialog(null, "Please Use The Correct Format");
+                    // Reset Text Fields
+                    tfRegisterUsername.setText("");
+                    tfRegisterEmail.setText("");
+                    tfRegisterEmailConfirm.setText("");
+                    pfRegisterPassword.setText("");
+                    pfRegisterPasswordConfirm.setText("");
                 }
-                pnlRegister.setVisible(false);
-                pnlLogin.setVisible(true);
             }
         });
         btnRegisterCancel.addActionListener(new ActionListener() {
@@ -214,12 +227,23 @@ public class ClientGUI extends JFrame {
 
                 if(verifyNewPassword.passwordFormatCheck() && verifyConfirmNewPassword.passwordFormatCheck()){
                     System.out.println("Password Changed.");
+                    JOptionPane.showMessageDialog(null, "Success");
+                    pnlChange.setVisible(false);
+                    pnlDashboard.setVisible(true);
+
+                    // Reset Text Fields
+                    pfCurrentPassword.setText("");
+                    pfNewPassword.setText("");
+                    pfConfirmNewPassword.setText("");
                 } else {
                     System.out.println("Format Incorrect.");
-                }
+                    JOptionPane.showMessageDialog(null, "Incorrect Format. Please Try Again");
 
-                pnlChange.setVisible(false);
-                pnlDashboard.setVisible(true);
+                    // Reset Text Fields
+                    pfCurrentPassword.setText("");
+                    pfNewPassword.setText("");
+                    pfConfirmNewPassword.setText("");
+                }
             }
         });
         btnChangeCancel.addActionListener(new ActionListener() {
