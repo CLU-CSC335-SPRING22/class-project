@@ -1,24 +1,38 @@
 package Server;
-
-        import java.net.*;
-        import java.io.*;
+import java.io.*;
+import java.net.*;
 
 public class GreetServer {
+    private ServerSocket serverSocket;
+    private Socket clientSocket;
+    private PrintWriter out;
+    private BufferedReader in;
+
+    public void start(int port) throws IOException {
+        serverSocket = new ServerSocket(port);
+        clientSocket = serverSocket.accept();
+        out = new PrintWriter(clientSocket.getOutputStream(), true);
+        in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        String greeting = in.readLine();
+
+        if (greeting!=null) {
+            out.println("hello client");
+            System.out.println("hello client");
+        }
+        else {
+            out.println("unrecognised greeting");
+            System.out.println("unrecognised greeting");
+        }
+    }
+
+    public void stop() throws IOException {
+        in.close();
+        out.close();
+        clientSocket.close();
+        serverSocket.close();
+    }
     public static void main(String[] args) throws IOException {
-        ServerSocket ss = new ServerSocket(45555);
-        Socket s = ss.accept();
-
-        System.out.println("client connected");
-
-        InputStreamReader in = new InputStreamReader(s.getInputStream());
-        BufferedReader bf = new BufferedReader(in);
-
-        String str = bf.readLine();
-        System.out.println("Client: " + str);
-
-        PrintWriter pr = new PrintWriter(s.getOutputStream(), true);
-        pr.println("yes");
-
+        GreetServer server=new GreetServer();
+        server.start(6666);
     }
 }
-
