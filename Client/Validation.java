@@ -1,12 +1,16 @@
 package Client;
 
+import java.util.Arrays;
+
 import static java.lang.Character.isAlphabetic;
 import static java.lang.Character.isDigit;
 
 public class Validation {
     private String username;
     private char[] password;
+    private char[] confirmPassword;
     private String email;
+    private String confirmEmail;
     private int usernameLength;
     private int passwordLength;
     private int emailLength;
@@ -20,10 +24,12 @@ public class Validation {
                                 ':', ';', '<', '>', '=', '?', '@', '[', ']', ' ', '^', '_', '`',
                                 '{', '}', '|', '\'', '\\'};
 
-    Validation(String username, char[] password, String email) {
+    Validation(String username, char[] password, char[] confirmPassword, String email, String confirmEmail) {
         this.username = username;
         this.password = password;
+        this.confirmPassword = confirmPassword;
         this.email = email;
+        this.confirmEmail = confirmEmail;
     }
 
     public String getUsername(){
@@ -96,8 +102,24 @@ public class Validation {
         return false;
     }
 
+    public boolean emailMatchCheck(){
+        if(email.equalsIgnoreCase(confirmEmail)){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    public boolean passwordMatchCheck(){
+        if(Arrays.equals(password, confirmPassword)){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
     public boolean completeValidation() {
-        if(usernameFormatCheck() && emailFormatCheck() && passwordFormatCheck()){
+        if(usernameFormatCheck() && emailFormatCheck() && passwordFormatCheck() && emailMatchCheck() && passwordMatchCheck()){
             return true;
         }else {
             return false;

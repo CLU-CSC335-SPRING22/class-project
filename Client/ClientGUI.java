@@ -157,10 +157,12 @@ public class ClientGUI extends JFrame {
                 // Gathers User's Input from Input Fields
                 String username = tfRegisterUsername.getText();
                 String email = tfRegisterEmail.getText();
+                String confirmEmail = tfRegisterEmailConfirm.getText();
                 char[] password = pfRegisterPassword.getPassword();
+                char[] confirmPassword = pfRegisterPasswordConfirm.getPassword();
 
                 //Add Validation to Register User and Change Password
-                Validation verify = new Validation(username, password, email);
+                Validation verify = new Validation(username, password, confirmPassword, email, confirmEmail);
 
                 if(verify.completeValidation()) {
                     JOptionPane.showMessageDialog(null, "Success!");
@@ -174,7 +176,7 @@ public class ClientGUI extends JFrame {
                     pfRegisterPassword.setText("");
                     pfRegisterPasswordConfirm.setText("");
                 }else{
-                    JOptionPane.showMessageDialog(null, "Please Use The Correct Format");
+                    JOptionPane.showMessageDialog(null, "Please make sure the format is correct and entries match.");
                     // Reset Text Fields
                     tfRegisterUsername.setText("");
                     tfRegisterEmail.setText("");
@@ -216,17 +218,16 @@ public class ClientGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Username and email not needed here
+                // Username, email, confirmEmail not needed here
                 String username = "username";
-                String email = "email";
+                String email = "email@test.com";
+                String confirmEmail = "email@test.com";
                 char[] newPassword = pfNewPassword.getPassword();
                 char[] confirmNewPassword = pfConfirmNewPassword.getPassword();
 
-                Validation verifyNewPassword = new Validation(username, newPassword, email);
-                Validation verifyConfirmNewPassword = new Validation(username, confirmNewPassword, email);
+                Validation verifyNewPassword = new Validation(username, newPassword, confirmNewPassword, email, confirmEmail);
 
-                if(verifyNewPassword.passwordFormatCheck() && verifyConfirmNewPassword.passwordFormatCheck()){
-                    System.out.println("Password Changed.");
+                if(verifyNewPassword.completeValidation()){
                     JOptionPane.showMessageDialog(null, "Success");
                     pnlChange.setVisible(false);
                     pnlDashboard.setVisible(true);
@@ -236,8 +237,7 @@ public class ClientGUI extends JFrame {
                     pfNewPassword.setText("");
                     pfConfirmNewPassword.setText("");
                 } else {
-                    System.out.println("Format Incorrect.");
-                    JOptionPane.showMessageDialog(null, "Incorrect Format. Please Try Again");
+                    JOptionPane.showMessageDialog(null, "Please check format and make sure your entries match.");
 
                     // Reset Text Fields
                     pfCurrentPassword.setText("");
