@@ -15,7 +15,7 @@ public class GreetServer {
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         String greeting = in.readLine();
 
-        if (greeting!=null) {
+        if ("hello server".equals(greeting)) {
             out.println("hello client");
             System.out.println("hello client");
         }
