@@ -219,15 +219,12 @@ public class ClientGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Username, email, confirmEmail not needed here
-                String username = "username";
-                String email = "email@test.com";
-                String confirmEmail = "email@test.com";
                 char[] newPassword = pfNewPassword.getPassword();
                 char[] confirmNewPassword = pfConfirmNewPassword.getPassword();
 
-                Validation verifyNewPassword = new Validation(username, newPassword, confirmNewPassword, email, confirmEmail);
+                Validation verifyNewPassword = new Validation(newPassword, confirmNewPassword);
 
-                if(verifyNewPassword.completeValidation()){
+                if(verifyNewPassword.passwordFormatCheck() && verifyNewPassword.passwordMatchCheck()){
                     JOptionPane.showMessageDialog(null, "Success");
                     pnlChange.setVisible(false);
                     pnlDashboard.setVisible(true);

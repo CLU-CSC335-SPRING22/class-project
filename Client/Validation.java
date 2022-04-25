@@ -32,6 +32,11 @@ public class Validation {
         this.confirmEmail = confirmEmail;
     }
 
+    Validation(char[] password, char[] confirmPassword) {
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
+
     public String getUsername(){
         return username;
     }
