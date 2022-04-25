@@ -25,7 +25,6 @@ public class GreetServer {
         }
     }
 
-
     public void stop() throws IOException {
         in.close();
         out.close();
