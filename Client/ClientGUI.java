@@ -3,6 +3,7 @@ package Client;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class ClientGUI extends JFrame {
     private JPanel pnlClient;
@@ -82,6 +83,15 @@ public class ClientGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                String host = tfDomain.getText();
+                int port = 8000;
+                // -- instantiate a Client object
+                //    the constructor will attempt to connect to the server
+                try {
+                    ClientConnection client = new ClientConnection(host, port);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
                 pnlConnect.setVisible(false);
                 pnlLogin.setVisible(true);
             }

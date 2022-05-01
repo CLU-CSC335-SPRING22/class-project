@@ -7,6 +7,7 @@ public class Server {
     public static void main(String[] args) {
         new ServerGUI();
         dbc = new DBaseConnection();
+        new ServerConnection().run();
     }
 
     public static boolean checkConnection() {
