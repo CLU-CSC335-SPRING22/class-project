@@ -24,5 +24,6 @@ hs_err_pid*
 
 .idea
 /out/*
-/class-project.iml
+
 /.env
+/class-project.iml

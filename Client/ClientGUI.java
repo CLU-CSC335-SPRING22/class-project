@@ -163,10 +163,37 @@ public class ClientGUI extends JFrame {
              *
              * @param e the event to be processed
              */
-            @Override
             public void actionPerformed(ActionEvent e) {
-                pnlRegister.setVisible(false);
-                pnlLogin.setVisible(true);
+                // Gathers User's Input from Input Fields
+                String username = tfRegisterUsername.getText();
+                String email = tfRegisterEmail.getText();
+                String confirmEmail = tfRegisterEmailConfirm.getText();
+                char[] password = pfRegisterPassword.getPassword();
+                char[] confirmPassword = pfRegisterPasswordConfirm.getPassword();
+
+                //Add Validation to Register User and Change Password
+                Validation verify = new Validation(username, password, confirmPassword, email, confirmEmail);
+
+                if(verify.completeValidation()) {
+                    JOptionPane.showMessageDialog(null, "Success!");
+                    pnlRegister.setVisible(false);
+                    pnlLogin.setVisible(true);
+
+                    // Reset Text Fields
+                    tfRegisterUsername.setText("");
+                    tfRegisterEmail.setText("");
+                    tfRegisterEmailConfirm.setText("");
+                    pfRegisterPassword.setText("");
+                    pfRegisterPasswordConfirm.setText("");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Please make sure the format is correct and entries match.");
+                    // Reset Text Fields
+                    tfRegisterUsername.setText("");
+                    tfRegisterEmail.setText("");
+                    tfRegisterEmailConfirm.setText("");
+                    pfRegisterPassword.setText("");
+                    pfRegisterPasswordConfirm.setText("");
+                }
             }
         });
         btnRegisterCancel.addActionListener(new ActionListener() {
@@ -201,8 +228,29 @@ public class ClientGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                pnlChange.setVisible(false);
-                pnlDashboard.setVisible(true);
+                // Username, email, confirmEmail not needed here
+                char[] newPassword = pfNewPassword.getPassword();
+                char[] confirmNewPassword = pfConfirmNewPassword.getPassword();
+
+                Validation verifyNewPassword = new Validation(newPassword, confirmNewPassword);
+
+                if(verifyNewPassword.passwordFormatCheck() && verifyNewPassword.passwordMatchCheck()){
+                    JOptionPane.showMessageDialog(null, "Success");
+                    pnlChange.setVisible(false);
+                    pnlDashboard.setVisible(true);
+
+                    // Reset Text Fields
+                    pfCurrentPassword.setText("");
+                    pfNewPassword.setText("");
+                    pfConfirmNewPassword.setText("");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Please check format and make sure your entries match.");
+
+                    // Reset Text Fields
+                    pfCurrentPassword.setText("");
+                    pfNewPassword.setText("");
+                    pfConfirmNewPassword.setText("");
+                }
             }
         });
         btnChangeCancel.addActionListener(new ActionListener() {
