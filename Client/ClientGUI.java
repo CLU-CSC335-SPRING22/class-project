@@ -19,7 +19,6 @@ public class ClientGUI extends JFrame {
     private JTextField tfDomain;
     private JLabel lblDomain;
     private JButton btnConnect;
-    private JProgressBar pbConnection;
     private JPanel pnlDashboard;
     private JButton btnDisconnect;
     private JButton btnLogout;
