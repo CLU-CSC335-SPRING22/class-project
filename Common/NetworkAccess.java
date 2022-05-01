@@ -26,19 +26,13 @@ public class NetworkAccess {
      * Constructor performs connection construction for the client
      * this will create a socket based on the IP address and the port number
      *
-     * @param ip: server.vandurasystems.xyz
+
      * @param port: 8000
      */
-    public NetworkAccess (String ip, int port) throws IOException {
+    public NetworkAccess (String ip, int port){
         try {
-            // -- construct the peer to peer socket
-            //    check if the server is available and connects if it is,
-            //    if not throw an exception
             socket = new Socket(ip, port);
 
-            // -- wrap the socket in stream I/O objects
-            //    these are for passing String types over the network
-            //    there are other stream types (Object stream) that can be used
             datain = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             dataout = new DataOutputStream(socket.getOutputStream());
 
@@ -49,11 +43,11 @@ public class NetworkAccess {
             System.exit(1);
 
         }
-//        catch (IOException e) {
-//
-//            System.out.println("Unable to create I/O streams.");
-//            System.exit(1);
-//        }
+        catch (IOException e) {
+
+            System.out.println("Unable to create I/O streams.");
+            System.exit(1);
+        }
 
     }
 
@@ -66,14 +60,9 @@ public class NetworkAccess {
     public NetworkAccess (Socket socket)
     {
         try {
-            // -- construct the peer to peer socket
-            //    check if the server is available and connects if it is,
-            //    if not throw an exception
+
             this.socket = socket;
 
-            // -- wrap the socket in stream I/O objects
-            //    these are for passing String types over the network
-            //    there are other stream types (Object stream) that can be used
             datain = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             dataout = new DataOutputStream(socket.getOutputStream());
 
@@ -113,26 +102,14 @@ public class NetworkAccess {
     {
         String rtnmsg = "";
 
-        // -- the protocol is this:
-        //    client sends a \n terminated String to the server
-        //    server receives String, processes it, sends \n terminate String to client
-        //    this is called a "hand-shake" system
         try {
-            // -- the server only receives String objects that are
-            //    terminated with a newline \n"
-            // -- send the String making sure to flush the buffer
+
             dataout.writeBytes(_msg + "\n");
             dataout.flush();
 
             if (acknowledge) {
-                // -- receive the response from the server
-                //    The do/while makes this a blocking read. Normally BufferedReader.readLine() is non-blocking.
-                //    That is, if there is no String to read, it will read "". Doing it this way does not allow
-                //    that to occur. We must get a response from the server. Time out could be implemented with
-                //    a counter.
                 rtnmsg = "";
                 do {
-                    // -- this is a non-blocking read
                     rtnmsg = datain.readLine();
 
                 } while (rtnmsg.equals(""));
