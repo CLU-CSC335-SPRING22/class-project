@@ -1,5 +1,7 @@
 package Client;
 
+import Common.NetworkAccess;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -177,6 +179,10 @@ public class ClientGUI extends JFrame {
                     JOptionPane.showMessageDialog(null, "Success!");
                     pnlRegister.setVisible(false);
                     pnlLogin.setVisible(true);
+
+                    NetworkAccess IOStream = new NetworkAccess("127.0.0.1", 8000);
+                    String userInfo = username + " " + String.valueOf(password) + " " + email;
+                    IOStream.sendString("R:" + userInfo, true);
 
                     // Reset Text Fields
                     tfRegisterUsername.setText("");
