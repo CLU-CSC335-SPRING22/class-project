@@ -105,8 +105,33 @@ public class ClientGUI extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                pnlLogin.setVisible(false);
-                pnlDashboard.setVisible(true);
+                // Gathers User's Input from Input Fields
+                String username = tfUsernameLogin.getText();
+                char[] password = pfPasswordLogin.getPassword();
+
+                Validation verify = new Validation(username, password);
+
+                if(verify.loginValidation()) {
+                    JOptionPane.showMessageDialog(null, "Logged In!");
+                    pnlRegister.setVisible(false);
+                    pnlLogin.setVisible(true);
+
+                    NetworkAccess IOStream = new NetworkAccess("127.0.0.1", 8000);
+                    String userInfo = username + " " + String.valueOf(password);
+                    IOStream.sendString("L:" + userInfo, true);
+
+                    // Reset Text Fields
+                    tfUsernameLogin.setText("");
+                    pfPasswordLogin.setText("");
+
+                    pnlLogin.setVisible(false);
+                    pnlDashboard.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Please make sure inputs are valid!");
+                    // Reset Text Fields
+                    tfUsernameLogin.setText("");
+                    pfPasswordLogin.setText("");
+                }
             }
         });
         btnDisconnect.addActionListener(new ActionListener() {
@@ -243,6 +268,9 @@ public class ClientGUI extends JFrame {
                     JOptionPane.showMessageDialog(null, "Success");
                     pnlChange.setVisible(false);
                     pnlDashboard.setVisible(true);
+
+                    NetworkAccess IOStream = new NetworkAccess("127.0.0.1", 8000);
+                    IOStream.sendString("N:" + String.valueOf(newPassword), true);
 
                     // Reset Text Fields
                     pfCurrentPassword.setText("");
