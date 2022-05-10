@@ -32,6 +32,11 @@ public class Validation {
         this.confirmEmail = confirmEmail;
     }
 
+    Validation(String username, char[] password) {
+        this.username = username;
+        this.password = password;
+    }
+
     Validation(char[] password, char[] confirmPassword) {
         this.password = password;
         this.confirmPassword = confirmPassword;
@@ -43,6 +48,14 @@ public class Validation {
 
     public String getEmail(){
         return email;
+    }
+
+    public boolean loginValidation() {
+        if (username.length() > 1 && password.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean usernameFormatCheck(){

@@ -129,6 +129,22 @@ public class DBaseConnection {
 
 	}
 
+    public ResultSet usernameSqlCommand() throws SQLException {
+        String sqlcmd;
+
+        conn = DriverManager.getConnection(userdatabaseURL, user, password);
+
+        // -- These will be used to send queries to the database
+        stmt = conn.createStatement();
+
+        // -- simple SQL strings as they would be typed into the workbench
+        System.out.println("selecting all records from data base");
+        sqlcmd = "SELECT * FROM vandura;";
+        rset = stmt.executeQuery(sqlcmd);
+
+        return rset;
+    }
+
     public static boolean getConnectionStatus() throws SQLException {
         return conn.isValid(5);
     }
